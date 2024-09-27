@@ -62,7 +62,7 @@ class Stack
 {
     int[] _value = new int[2];
 
-    public int Count { get; set; }
+    public int Count { get; private set; } = 0;
 
     public void Push(int value)
     {
