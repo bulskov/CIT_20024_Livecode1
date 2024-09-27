@@ -72,7 +72,8 @@ class Stack
 
     public int Pop()
     {
-        var pos = Count--;
+        var pos = Count - 1;
+        Count--;
         return _value[pos];
     }
 }
