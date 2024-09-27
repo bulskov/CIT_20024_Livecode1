@@ -1,6 +1,6 @@
 using FluentAssertions;
 
-namespace Stack.Testing;
+namespace StackLibrary;
 
 public class StackTests
 {

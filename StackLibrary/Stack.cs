@@ -1,4 +1,4 @@
-﻿namespace Stack.Testing;
+﻿namespace StackLibrary;
 
 public class Stack
 {
