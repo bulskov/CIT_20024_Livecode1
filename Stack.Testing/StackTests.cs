@@ -33,20 +33,32 @@ public class StackTests
         result.Should().Be(1);
     }
 
+    [Fact]
+    public void StackShouldStoreAnyValueWhenPushed()
+    {
+        var stack = new Stack();
+
+        stack.Push(1111);
+        var result = stack.Pop();
+        result.Should().Be(1111);
+    }
+
 }
 
 class Stack
 {
+    int _value;
 
     public int Count { get; set; }
 
     public void Push(int value)
     {
         Count++;
+        _value = value;
     }
 
     public int Pop()
     {
-        return 1;
+        return _value;
     }
 }
