@@ -12,10 +12,25 @@ public class StackTests
         stack.Count.Should().Be(0);
     }
 
+    [Fact]
+    public void StackShouldIncrementCountWhenPushed()
+    {
+        var stack = new Stack();
+
+        stack.Push(1);
+
+        stack.Count.Should().Be(1);
+    }
+
 }
 
 class Stack
 {
 
     public int Count { get; set; }
+
+    public void Push(int value)
+    {
+        Count++;
+    }
 }
