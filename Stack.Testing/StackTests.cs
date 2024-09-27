@@ -43,22 +43,36 @@ public class StackTests
         result.Should().Be(1111);
     }
 
+    [Fact]
+    public void StackShouldStoreMultipleValuesWhenPushed()
+    {
+        var stack = new Stack();
+
+        stack.Push(1);
+        stack.Push(2);
+        stack.Pop();
+        var result = stack.Pop();
+
+        result.Should().Be(1);
+    }
+
 }
 
 class Stack
 {
-    int _value;
+    int[] _value = new int[2];
 
     public int Count { get; set; }
 
     public void Push(int value)
     {
+        _value[Count] = value;
         Count++;
-        _value = value;
     }
 
     public int Pop()
     {
-        return _value;
+        var pos = Count--;
+        return _value[pos];
     }
 }
