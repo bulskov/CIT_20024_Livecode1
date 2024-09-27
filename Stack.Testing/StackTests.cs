@@ -1,3 +1,5 @@
+using FluentAssertions;
+
 namespace Stack.Testing;
 
 public class StackTests
@@ -7,7 +9,7 @@ public class StackTests
     {
         var stack = new Stack();
 
-        Assert.Equal(stack.Count, 0); 
+        stack.Count.Should().Be(0);
     }
 
 }
