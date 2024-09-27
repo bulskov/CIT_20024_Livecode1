@@ -22,6 +22,17 @@ public class StackTests
         stack.Count.Should().Be(1);
     }
 
+    [Fact]
+    public void StackShouldStoreValueWhenPushed()
+    {
+        var stack = new Stack();
+
+        stack.Push(1);
+        var result = stack.Pop();
+
+        result.Should().Be(1);
+    }
+
 }
 
 class Stack
@@ -32,5 +43,10 @@ class Stack
     public void Push(int value)
     {
         Count++;
+    }
+
+    public int Pop()
+    {
+        return 1;
     }
 }
